@@ -1,0 +1,10 @@
+MySQL Table Update
+
+ALTER TABLE student ADD COLUMN course VARCHAR(50) NOT NULL;
+
+
+
+
+
+teast
+http://<LoadBalancer-IP>/students
