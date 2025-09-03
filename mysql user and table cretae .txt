@@ -1,0 +1,43 @@
+Database Table Setup
+
+Exec Into Pod:
+kubectl exec -it pod-name -n namespace-name  -- bash
+
+Login to MySQL:
+
+mysql -u root -p             roo user passward
+
+
+User create karo
+
+CREATE USER 'myuser'@'%' IDENTIFIED BY 'myuser@123';
+
+Student DB par full access do
+
+GRANT ALL PRIVILEGES ON school.* TO 'myuser'@'%';
+
+Privileges refresh karo: 
+
+FLUSH PRIVILEGES;
+
+Verify
+
+SHOW GRANTS FOR 'myuser'@'%';
+
+SQL Table Creation Script
+
+CREATE DATABASE IF NOT EXISTS school;
+USE school;
+
+CREATE TABLE IF NOT EXISTS student (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    age INT NOT NULL,
+    mob VARCHAR(15) NOT NULL,
+    email_id VARCHAR(100) NOT NULL
+);
+
+SHOW DATABASES;
+USE school;
+SHOW TABLES;
+DESCRIBE student;
